@@ -1,3 +1,2 @@
 #!/usr/bin/python3
-$PYFILE = python3.10
-python $PYFILE.py
+python3 $PYFILE
