@@ -3,4 +3,4 @@ def print_sorted_dictionary(a_dictionary):
     new_list = list(a_dictionary.keys())
     ord_lit = new_list.sort()
     for i in ord_list:
-        print("{} : {}".format(i, a_dictionary.get(i)))
+        print("{} : {}".format(i, a_dictionary[keys]))
