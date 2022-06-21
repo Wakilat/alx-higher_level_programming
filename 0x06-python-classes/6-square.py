@@ -18,7 +18,7 @@ class Square:
     def size(self, value):
         """ Method to set the size value of the square object
         """
-        if type(size) != int:
+        if not isinstance(value, int):
             raise TypeError("size must be an integer")
         if value < 0:
             raise ValueError("size must be >= 0")
