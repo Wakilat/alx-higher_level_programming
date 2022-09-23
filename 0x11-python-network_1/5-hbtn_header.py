@@ -1,15 +1,10 @@
 #!/usr/bin/python3
 """
-Python script that sends a request to the URL and
-displays the value of a variable in the response header
+same as 1-hbtn_header with requests module
 """
-import requests
-import sys
 
-
-if __name__ == "__main__":
-    try:
-        r = requests.get(sys.argv[1])
-        print(r.headers['X-Request-Id'])
-    except:
-        pass
+if __name__ == '__main__':
+    import requests
+    import sys
+    res = requests.get(sys.argv[1])
+    print(res.headers.get('X-Request-Id'))
