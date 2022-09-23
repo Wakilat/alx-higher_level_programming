@@ -1,23 +1,14 @@
 #!/usr/bin/python3
+"""script for testing status of web pages
 """
-fetch holberton /statue page
-"""
-
-if __name__ == '__main__':
+if __name__ == "__main__":
     import urllib.request
-    req = urllib.request.Request('https://intranet.hbtn.io/status')
-    with urllib.request.urlopen(req) as response:
-        html = response.read()
-
-    print("Body response:")
-    print("\t- type: {}".format(html.__class__))
-    print("\t- content: {}".format(html))
-    print("\t- utf8 content: {}".format(html.decode('ascii')))
-Footer
-© 2022 GitHub, Inc.
-Footer navigation
-Terms
-Privacy
-Security
-Status
-D
+    url = "https://intranet.hbtn.io/status"
+    with urllib.request.urlopen(url) as response:
+        bytes_content = response.read()
+        content = bytes_content.decode('utf-8')
+        print_str = '''Body response:
+\t- type: {}
+\t- content: {}
+\t- utf8 content: {}'''.format(type(bytes_content), bytes_content, content)
+        print(print_str)

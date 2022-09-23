@@ -1,11 +1,12 @@
 #!/usr/bin/python3
+"""script for testing status of web pages
 """
-same as 0-hbtn_status with requests model
-"""
-
-if __name__ == '__main__':
+if __name__ == "__main__":
     import requests
-    html = requests.get('https://intranet.hbtn.io/status')
-    print("Body response:")
-    print("\t- type: {}".format(html.text.__class__))
-    print("\t- content: {}".format(html.text)))
+    url = "https://intranet.hbtn.io/status"
+    response = requests.get(url)
+    content = response.text
+    print_str = '''Body response:
+\t- type: {}
+\t- content: {}'''.format(type(content), content)
+    print(print_str)
